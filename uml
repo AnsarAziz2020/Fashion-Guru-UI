@@ -1,0 +1,391 @@
+Bottom Navigation Bar
++dynamic selectedIndex
++State<Custom_Navigator> createState()
+
+Bottom Navigation Bar
++Map<String, dynamic> loggedInUser
++void initState()
+-void _onItemTapped()
++Widget build()
+
+Add Product Screen
++String isUpdateProduct
++State<AddProduct> createState()
+
+Add Product Screen
++Map<String, dynamic> loggedInUser
++List<dynamic> categories
+-GlobalKey<FormState> _formKey
++TextEditingController nameController
++TextEditingController descriptionController
++TextEditingController priceController
++TextEditingController colorsController
++TextEditingController sizeController
++String categorySelectedValue
++List<File> selectedFile
++List<String> selectedSizes
++void initState()
++Widget build()
+
+Admin Order Detail Screen
++String id
++State<AdminOrderDetailScreen> createState()
+
+Admin Order Detail Screen
+-String _selectedStatus
++List<String> statusOptions
++Map<String, Color> statusColors
++Map<String, dynamic> loggedInUser
++Map<String, dynamic> orderDetails
++List<dynamic> orderIds
++Map<String, dynamic> orderTotalPrice
++void initState()
++Widget build()
+
+Admin Portal
++State<AdminPortal> createState()
+
+Admin Portal
++Widget build()
+
+Admin View Order Screen
++State<AdminViewOrderScreen> createState()
+
+Admin View Order Screen
++int quantity
++Map<String, dynamic> loggedInUser
++List<dynamic> orderList
++List<dynamic> orderIds
++int orderListLength
++Map<String, dynamic> orderTotalPrice
+-GlobalKey<FormState> _formKey
++Map<String, dynamic> getDeliveryStatus
++void initState()
++Widget build()
+
+Admin View Product Screen
++State<AdminViewProductScreen> createState()
+
+Admin View Product Screen
++TextEditingController searchController
++Color editIconColor
++Color deleteIconColor
++Color containerColor
++List<dynamic> products
++void initState()
++Widget build()
+
+Admin View User Screen
++State<ViewUserScreen> createState()
+
+Admin View User Screen
++TextEditingController searchController
++Color editIconColor
++Color deleteIconColor
++Color containerColor
++bool isSelected
++List<dynamic> customers
++List<dynamic> vendors
++void initState()
++Widget build()
+
+Change Pass Screen
++String email
++State<ChangePassScreen> createState()
+
+Change Pass Screen
++TextEditingController passwordController
++TextEditingController confirmPassController
++bool passwordEye
++bool confirmPasswordEye
++Color passEyeColor
++Color confirmPassEyeColor
+-GlobalKey<FormState> _formKey
++Widget build()
+
+Checkout Screen
++State<CheckoutScreen> createState()
+
+Checkout Screen
++Map<String, dynamic> deliveryDetails
++Map<String, dynamic> loggedInUser
++int totalPrice
++List<dynamic> productList
++void initState()
++Widget build()
+
+Dashboard Screen
++State<DashboardScreen> createState()
+
+Dashboard Screen
++Map<String, dynamic> loggedInUser
++List<dynamic> categories
++List<dynamic> products
++String selectedCategory
++TextEditingController searchController
++Color allCardColor
++Color shirtCardColor
++Color tShirtCardColor
++Color jeansCardColor
++Color allCardTextColor
++Color shirtCardTextColor
++Color tShirtCardTextColor
++Color jeansCardTextColor
++void updateCategory()
++void initState()
++Widget build()
+
+Delivery Address Screen
++State<DeliveryAddressScreen> createState()
+
+Delivery Address Screen
+-GlobalKey<FormState> _formKey
++TextEditingController fullNameController
++TextEditingController contactNoController
++TextEditingController emailController
++TextEditingController addressController
++Map<String, dynamic> deliveryDetails
++void initState()
++Widget build()
+
+Edit User Info Screen
++State<EditInfoScreen> createState()
+
+Edit User Info Screen
++TextEditingController nameController
++TextEditingController emailController
++TextEditingController contactNoController
++TextEditingController addressController
+-GlobalKey<FormState> _formKey
++Widget build()
+
+Forgetpass Screen
++State<ForgetpassScreen> createState()
+
+Forgetpass Screen
++TextEditingController emailController
++EmailOTP myAuth
+-GlobalKey<FormState> _formKey
++Widget build()
+
+Home Screen
++dynamic loggedInUser
++Widget build()
+
+Inapp Change Pass Screen
++State<InAppChangePassScreen> createState()
+
+Inapp Change Pass Screen
++TextEditingController oldPassController
++TextEditingController passwordController
++TextEditingController confirmPassController
++bool passwordEye
++bool confirmPasswordEye
++Color passEyeColor
++Color confirmPassEyeColor
+-GlobalKey<FormState> _formKey
++Widget build()
+
+Login Screen
++State<LoginScreen> createState()
+
+Login Screen
++TextEditingController emailController
++TextEditingController passwordController
+-GlobalKey<FormState> _formKey
+-bool _isLoading
++bool passwordEye
++String errorMsg
++Widget build()
+
+Mycart Screen
++State<MyCartScreen> createState()
+
+Mycart Screen
++Color deleteIconColor
++Color containerColor
++List<dynamic> productList
++Map<String, dynamic> loggedInUser
++int totalPrice
++Map<String, dynamic> productQuantity
++void initState()
++Widget build()
+
+Order Details Screen
++String id
++State<OrderDetailScreen> createState()
+
+Order Details Screen
++String deliveredText
++String pendingText
++String acceptedText
++String declinedText
++Color deliveredColor
++Color pendingColor
++Color acceptedColor
++Color declinedColor
++Icon deliveredIcon
++Icon pendingIcon
++String deliveryStatusText
++Color deliveryStatusColor
++Icon statusIcon
++int quantity
++Map<String, dynamic> loggedInUser
++Map<String, dynamic> orderDetails
++List<dynamic> orderIds
++Map<String, dynamic> orderTotalPrice
++void getDeliveryStatus()
++void initState()
++Widget build()
+
+Order History Screen
++State<OrderHistoryScreen> createState()
+
+Order History Screen
++int quantity
++Map<String, dynamic> loggedInUser
++List<dynamic> orderList
++List<dynamic> orderIds
++int orderListLength
++Map<String, dynamic> orderTotalPrice
+-GlobalKey<FormState> _formKey
++TextEditingController reviewController
++int ratingStars
++Map<String, dynamic> getDeliveryStatus
++void initState()
++Widget build()
+
+Product Detail Screen
++Map<String, dynamic> productDetails
++State<ProductDetailScreen> createState()
+
+Product Detail Screen
++List<String> otherImages
++List<String> sizes
++List<String> colors
++String activeImage
++String selectedImage
++String selectedSize
++String selectedColor
++Map<String, dynamic> loggedInUser
++int reviewShown
++List<dynamic> reviews
+-GlobalKey<FormState> _formKey
++TextEditingController priceController
++TextEditingController quantityController
++void initState()
++Widget build()
+
+Resulted Products
++File searchImage
++State<ResultedProducts> createState()
+
+Resulted Products
++TextEditingController searchController
++List<dynamic> products
+-bool _loading
++void initState()
++Widget build()
+
+Signup Screen
++State<SignupScreen> createState()
+
+Signup Screen
++TextEditingController nameController
++TextEditingController emailController
++TextEditingController contactNoController
++TextEditingController addressController
++TextEditingController passwordController
++TextEditingController confirmPassController
++bool passwordEye
++bool confirmPasswordEye
+-GlobalKey<FormState> _formKey
++TextEditingController shopNameController
++TextEditingController vendorNameController
++TextEditingController shopEmailController
++TextEditingController shopContactNoController
++TextEditingController shopAddressController
++TextEditingController shopPasswordController
++TextEditingController shopConfirmPassController
++bool shopPasswordEye
++bool shopConfirmPasswordEye
+-GlobalKey<FormState> _shopFormKey
++EmailOTP myAuth
++String error
++Widget build()
+
+Splash Screen
++State<SplashScreen> createState()
+
+Splash Screen
++double opacity
++void initState()
++void dispose()
++Widget build()
+
+User Details Screen
++State<UserDetailScreen> createState()
+
+User Details Screen
++Widget build()
+
+Vendor Profile
++State<VendorProfile> createState()
+
+Vendor Profile
++Map<String, dynamic> loggedInUser
++bool isVendor
++void initState()
++Widget build()
+
+Verification Screen
++String userEmail
++String userPassword
++Map<String, dynamic> userDetails
++bool isAddUser
++EmailOTP myAuth
++State<VerificationScreen> createState()
+
+Verification Screen
++TextEditingController otpCode
+-GlobalKey<FormState> _formKey
++String errors
++void changeErrors()
++Widget build()
++void addUser()
++void checkOTP()
+
+View Orders
++State<ViewOrders> createState()
+
+View Orders
++Map<String, dynamic> loggedInUser
++Map<String, dynamic> ordersList
++Map<String, dynamic> getDeliveryStatus
++void initState()
++Widget build()
+
+View Products Screen
++State<ViewProductScreen> createState()
+
+View Products Screen
++Map<String, dynamic> loggedInUser
++List<dynamic> products
++int selectedProductsIndex
++TextEditingController searchController
++Color editIconColor
++Color deleteIconColor
++Color containerColor
++void initState()
++Widget build()
+
+Firebase Api
++GlobalKey<NavigatorState> navigatorKey
+-FirebaseMessaging _firebaseMessaging
+-AndroidNotificationChannel _androidChannel
++InitializationSettings initializationSettings
++FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin
++dynamic initNotifications()
++void onSelectNotification()
++dynamic handleBackgroundMessage()
+

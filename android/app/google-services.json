@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "386305183847",
+    "project_id": "fashion-guru-8635b",
+    "storage_bucket": "fashion-guru-8635b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386305183847:android:7b245862f23670cd5a04c2",
+        "android_client_info": {
+          "package_name": "com.example.fashion_guru"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvlvwsswgPx3eQO_is3ohF0blrSoUEFZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

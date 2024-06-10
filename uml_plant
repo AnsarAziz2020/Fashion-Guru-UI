@@ -1,0 +1,609 @@
+@startuml
+set namespaceSeparator ::
+
+class "fashion_guru::components::bottom_navigation_bar.dart::Custom_Navigator" {
+  +dynamic selectedIndex
+  +State<Custom_Navigator> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::components::bottom_navigation_bar.dart::Custom_Navigator"
+
+class "fashion_guru::components::bottom_navigation_bar.dart::_Custom_NavigatorState" {
+  +Map<String, dynamic> loggedInUser
+  +void initState()
+  -void _onItemTapped()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::components::bottom_navigation_bar.dart::_Custom_NavigatorState"
+
+class "fashion_guru::screens::add_product_screen.dart::AddProduct" {
+  +String isUpdateProduct
+  +State<AddProduct> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::add_product_screen.dart::AddProduct"
+
+class "fashion_guru::screens::add_product_screen.dart::_AddProductState" {
+  +Map<String, dynamic> loggedInUser
+  +List<dynamic> categories
+  -GlobalKey<FormState> _formKey
+  +TextEditingController nameController
+  +TextEditingController descriptionController
+  +TextEditingController priceController
+  +TextEditingController colorsController
+  +TextEditingController sizeController
+  +String categorySelectedValue
+  +List<File> selectedFile
+  +List<String> selectedSizes
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::add_product_screen.dart::_AddProductState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"fashion_guru::screens::add_product_screen.dart::_AddProductState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::add_product_screen.dart::_AddProductState"
+
+class "fashion_guru::screens::admin_order_detail_screen.dart::AdminOrderDetailScreen" {
+  +String id
+  +State<AdminOrderDetailScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::admin_order_detail_screen.dart::AdminOrderDetailScreen"
+
+class "fashion_guru::screens::admin_order_detail_screen.dart::_AdminOrderDetailScreenState" {
+  -String _selectedStatus
+  +List<String> statusOptions
+  +Map<String, Color> statusColors
+  +Map<String, dynamic> loggedInUser
+  +Map<String, dynamic> orderDetails
+  +List<dynamic> orderIds
+  +Map<String, dynamic> orderTotalPrice
+  +void initState()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::admin_order_detail_screen.dart::_AdminOrderDetailScreenState"
+
+class "fashion_guru::screens::admin_portal.dart::AdminPortal" {
+  +State<AdminPortal> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::admin_portal.dart::AdminPortal"
+
+class "fashion_guru::screens::admin_portal.dart::_AdminPortalState" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::admin_portal.dart::_AdminPortalState"
+
+class "fashion_guru::screens::admin_view_order_screen.dart::AdminViewOrderScreen" {
+  +State<AdminViewOrderScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::admin_view_order_screen.dart::AdminViewOrderScreen"
+
+class "fashion_guru::screens::admin_view_order_screen.dart::_AdminViewOrderScreenState" {
+  +int quantity
+  +Map<String, dynamic> loggedInUser
+  +List<dynamic> orderList
+  +List<dynamic> orderIds
+  +int orderListLength
+  +Map<String, dynamic> orderTotalPrice
+  -GlobalKey<FormState> _formKey
+  +Map<String, dynamic> getDeliveryStatus
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::admin_view_order_screen.dart::_AdminViewOrderScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::admin_view_order_screen.dart::_AdminViewOrderScreenState"
+
+class "fashion_guru::screens::admin_view_product_screen.dart::AdminViewProductScreen" {
+  +State<AdminViewProductScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::admin_view_product_screen.dart::AdminViewProductScreen"
+
+class "fashion_guru::screens::admin_view_product_screen.dart::_AdminViewProductScreenState" {
+  +TextEditingController searchController
+  +Color editIconColor
+  +Color deleteIconColor
+  +Color containerColor
+  +List<dynamic> products
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::admin_view_product_screen.dart::_AdminViewProductScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::admin_view_product_screen.dart::_AdminViewProductScreenState" o-- "dart::ui::Color"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::admin_view_product_screen.dart::_AdminViewProductScreenState"
+
+class "fashion_guru::screens::admin_view_user_screen.dart::ViewUserScreen" {
+  +State<ViewUserScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::admin_view_user_screen.dart::ViewUserScreen"
+
+class "fashion_guru::screens::admin_view_user_screen.dart::_ViewUserScreenState" {
+  +TextEditingController searchController
+  +Color editIconColor
+  +Color deleteIconColor
+  +Color containerColor
+  +bool isSelected
+  +List<dynamic> customers
+  +List<dynamic> vendors
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::admin_view_user_screen.dart::_ViewUserScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::admin_view_user_screen.dart::_ViewUserScreenState" o-- "dart::ui::Color"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::admin_view_user_screen.dart::_ViewUserScreenState"
+
+class "fashion_guru::screens::change_pass_screen.dart::ChangePassScreen" {
+  +String email
+  +State<ChangePassScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::change_pass_screen.dart::ChangePassScreen"
+
+class "fashion_guru::screens::change_pass_screen.dart::_ChangePassScreenState" {
+  +TextEditingController passwordController
+  +TextEditingController confirmPassController
+  +bool passwordEye
+  +bool confirmPasswordEye
+  +Color passEyeColor
+  +Color confirmPassEyeColor
+  -GlobalKey<FormState> _formKey
+  +Widget build()
+}
+
+"fashion_guru::screens::change_pass_screen.dart::_ChangePassScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::change_pass_screen.dart::_ChangePassScreenState" o-- "dart::ui::Color"
+"fashion_guru::screens::change_pass_screen.dart::_ChangePassScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::change_pass_screen.dart::_ChangePassScreenState"
+
+class "fashion_guru::screens::checkout_screen.dart::CheckoutScreen" {
+  +State<CheckoutScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::checkout_screen.dart::CheckoutScreen"
+
+class "fashion_guru::screens::checkout_screen.dart::_CheckoutScreenState" {
+  +Map<String, dynamic> deliveryDetails
+  +Map<String, dynamic> loggedInUser
+  +int totalPrice
+  +List<dynamic> productList
+  +void initState()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::checkout_screen.dart::_CheckoutScreenState"
+
+class "fashion_guru::screens::dashboard_screen.dart::DashboardScreen" {
+  +State<DashboardScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::dashboard_screen.dart::DashboardScreen"
+
+class "fashion_guru::screens::dashboard_screen.dart::_DashboardScreenState" {
+  +Map<String, dynamic> loggedInUser
+  +List<dynamic> categories
+  +List<dynamic> products
+  +String selectedCategory
+  +TextEditingController searchController
+  +Color allCardColor
+  +Color shirtCardColor
+  +Color tShirtCardColor
+  +Color jeansCardColor
+  +Color allCardTextColor
+  +Color shirtCardTextColor
+  +Color tShirtCardTextColor
+  +Color jeansCardTextColor
+  +void updateCategory()
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::dashboard_screen.dart::_DashboardScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::dashboard_screen.dart::_DashboardScreenState" o-- "dart::ui::Color"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::dashboard_screen.dart::_DashboardScreenState"
+
+class "fashion_guru::screens::delivery_address_screen.dart::DeliveryAddressScreen" {
+  +State<DeliveryAddressScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::delivery_address_screen.dart::DeliveryAddressScreen"
+
+class "fashion_guru::screens::delivery_address_screen.dart::_DeliveryAddressScreenState" {
+  -GlobalKey<FormState> _formKey
+  +TextEditingController fullNameController
+  +TextEditingController contactNoController
+  +TextEditingController emailController
+  +TextEditingController addressController
+  +Map<String, dynamic> deliveryDetails
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::delivery_address_screen.dart::_DeliveryAddressScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"fashion_guru::screens::delivery_address_screen.dart::_DeliveryAddressScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::delivery_address_screen.dart::_DeliveryAddressScreenState"
+
+class "fashion_guru::screens::edit_user_info_screen.dart::EditInfoScreen" {
+  +State<EditInfoScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::edit_user_info_screen.dart::EditInfoScreen"
+
+class "fashion_guru::screens::edit_user_info_screen.dart::_EditInfoScreenState" {
+  +TextEditingController nameController
+  +TextEditingController emailController
+  +TextEditingController contactNoController
+  +TextEditingController addressController
+  -GlobalKey<FormState> _formKey
+  +Widget build()
+}
+
+"fashion_guru::screens::edit_user_info_screen.dart::_EditInfoScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::edit_user_info_screen.dart::_EditInfoScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::edit_user_info_screen.dart::_EditInfoScreenState"
+
+class "fashion_guru::screens::forgetpass_screen.dart::ForgetpassScreen" {
+  +State<ForgetpassScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::forgetpass_screen.dart::ForgetpassScreen"
+
+class "fashion_guru::screens::forgetpass_screen.dart::_ForgetpassScreenState" {
+  +TextEditingController emailController
+  +EmailOTP myAuth
+  -GlobalKey<FormState> _formKey
+  +Widget build()
+}
+
+"fashion_guru::screens::forgetpass_screen.dart::_ForgetpassScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::forgetpass_screen.dart::_ForgetpassScreenState" o-- "email_otp::email_otp.dart::EmailOTP"
+"fashion_guru::screens::forgetpass_screen.dart::_ForgetpassScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::forgetpass_screen.dart::_ForgetpassScreenState"
+
+class "fashion_guru::screens::home_screen.dart::HomeScreen" {
+  +dynamic loggedInUser
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "fashion_guru::screens::home_screen.dart::HomeScreen"
+
+class "fashion_guru::screens::inapp_change_pass_screen.dart::InAppChangePassScreen" {
+  +State<InAppChangePassScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::inapp_change_pass_screen.dart::InAppChangePassScreen"
+
+class "fashion_guru::screens::inapp_change_pass_screen.dart::_InAppChangePassScreenState" {
+  +TextEditingController oldPassController
+  +TextEditingController passwordController
+  +TextEditingController confirmPassController
+  +bool passwordEye
+  +bool confirmPasswordEye
+  +Color passEyeColor
+  +Color confirmPassEyeColor
+  -GlobalKey<FormState> _formKey
+  +Widget build()
+}
+
+"fashion_guru::screens::inapp_change_pass_screen.dart::_InAppChangePassScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::inapp_change_pass_screen.dart::_InAppChangePassScreenState" o-- "dart::ui::Color"
+"fashion_guru::screens::inapp_change_pass_screen.dart::_InAppChangePassScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::inapp_change_pass_screen.dart::_InAppChangePassScreenState"
+
+class "fashion_guru::screens::login_screen.dart::LoginScreen" {
+  +State<LoginScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::login_screen.dart::LoginScreen"
+
+class "fashion_guru::screens::login_screen.dart::_LoginScreenState" {
+  +TextEditingController emailController
+  +TextEditingController passwordController
+  -GlobalKey<FormState> _formKey
+  -bool _isLoading
+  +bool passwordEye
+  +String errorMsg
+  +Widget build()
+}
+
+"fashion_guru::screens::login_screen.dart::_LoginScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::login_screen.dart::_LoginScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::login_screen.dart::_LoginScreenState"
+
+class "fashion_guru::screens::mycart_screen.dart::MyCartScreen" {
+  +State<MyCartScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::mycart_screen.dart::MyCartScreen"
+
+class "fashion_guru::screens::mycart_screen.dart::_MyCartScreenState" {
+  +Color deleteIconColor
+  +Color containerColor
+  +List<dynamic> productList
+  +Map<String, dynamic> loggedInUser
+  +int totalPrice
+  +Map<String, dynamic> productQuantity
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::mycart_screen.dart::_MyCartScreenState" o-- "dart::ui::Color"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::mycart_screen.dart::_MyCartScreenState"
+
+class "fashion_guru::screens::order_details_screen.dart::OrderDetailScreen" {
+  +String id
+  +State<OrderDetailScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::order_details_screen.dart::OrderDetailScreen"
+
+class "fashion_guru::screens::order_details_screen.dart::_OrderDetailScreenState" {
+  +String deliveredText
+  +String pendingText
+  +String acceptedText
+  +String declinedText
+  +Color deliveredColor
+  +Color pendingColor
+  +Color acceptedColor
+  +Color declinedColor
+  +Icon deliveredIcon
+  +Icon pendingIcon
+  +String deliveryStatusText
+  +Color deliveryStatusColor
+  +Icon statusIcon
+  +int quantity
+  +Map<String, dynamic> loggedInUser
+  +Map<String, dynamic> orderDetails
+  +List<dynamic> orderIds
+  +Map<String, dynamic> orderTotalPrice
+  +void getDeliveryStatus()
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::order_details_screen.dart::_OrderDetailScreenState" o-- "dart::ui::Color"
+"fashion_guru::screens::order_details_screen.dart::_OrderDetailScreenState" o-- "flutter::src::widgets::icon.dart::Icon"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::order_details_screen.dart::_OrderDetailScreenState"
+
+class "fashion_guru::screens::order_history_screen.dart::OrderHistoryScreen" {
+  +State<OrderHistoryScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::order_history_screen.dart::OrderHistoryScreen"
+
+class "fashion_guru::screens::order_history_screen.dart::_OrderHistoryScreenState" {
+  +int quantity
+  +Map<String, dynamic> loggedInUser
+  +List<dynamic> orderList
+  +List<dynamic> orderIds
+  +int orderListLength
+  +Map<String, dynamic> orderTotalPrice
+  -GlobalKey<FormState> _formKey
+  +TextEditingController reviewController
+  +int ratingStars
+  +Map<String, dynamic> getDeliveryStatus
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::order_history_screen.dart::_OrderHistoryScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"fashion_guru::screens::order_history_screen.dart::_OrderHistoryScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::order_history_screen.dart::_OrderHistoryScreenState"
+
+class "fashion_guru::screens::product_detail_screen.dart::ProductDetailScreen" {
+  +Map<String, dynamic> productDetails
+  +State<ProductDetailScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::product_detail_screen.dart::ProductDetailScreen"
+
+class "fashion_guru::screens::product_detail_screen.dart::_ProductDetailScreenState" {
+  +List<String> otherImages
+  +List<String> sizes
+  +List<String> colors
+  +String activeImage
+  +String selectedImage
+  +String selectedSize
+  +String selectedColor
+  +Map<String, dynamic> loggedInUser
+  +int reviewShown
+  +List<dynamic> reviews
+  -GlobalKey<FormState> _formKey
+  +TextEditingController priceController
+  +TextEditingController quantityController
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::product_detail_screen.dart::_ProductDetailScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"fashion_guru::screens::product_detail_screen.dart::_ProductDetailScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::product_detail_screen.dart::_ProductDetailScreenState"
+
+class "fashion_guru::screens::resulted_products.dart::ResultedProducts" {
+  +File searchImage
+  +State<ResultedProducts> createState()
+}
+
+"fashion_guru::screens::resulted_products.dart::ResultedProducts" o-- "dart::io::File"
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::resulted_products.dart::ResultedProducts"
+
+class "fashion_guru::screens::resulted_products.dart::_ResultedProductsState" {
+  +TextEditingController searchController
+  +List<dynamic> products
+  -bool _loading
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::resulted_products.dart::_ResultedProductsState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::resulted_products.dart::_ResultedProductsState"
+
+class "fashion_guru::screens::signup_screen.dart::SignupScreen" {
+  +State<SignupScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::signup_screen.dart::SignupScreen"
+
+class "fashion_guru::screens::signup_screen.dart::_SignupScreenState" {
+  +TextEditingController nameController
+  +TextEditingController emailController
+  +TextEditingController contactNoController
+  +TextEditingController addressController
+  +TextEditingController passwordController
+  +TextEditingController confirmPassController
+  +bool passwordEye
+  +bool confirmPasswordEye
+  -GlobalKey<FormState> _formKey
+  +TextEditingController shopNameController
+  +TextEditingController vendorNameController
+  +TextEditingController shopEmailController
+  +TextEditingController shopContactNoController
+  +TextEditingController shopAddressController
+  +TextEditingController shopPasswordController
+  +TextEditingController shopConfirmPassController
+  +bool shopPasswordEye
+  +bool shopConfirmPasswordEye
+  -GlobalKey<FormState> _shopFormKey
+  +EmailOTP myAuth
+  +String error
+  +Widget build()
+}
+
+"fashion_guru::screens::signup_screen.dart::_SignupScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::signup_screen.dart::_SignupScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"fashion_guru::screens::signup_screen.dart::_SignupScreenState" o-- "email_otp::email_otp.dart::EmailOTP"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::signup_screen.dart::_SignupScreenState"
+
+class "fashion_guru::screens::splash_screen.dart::SplashScreen" {
+  +State<SplashScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::splash_screen.dart::SplashScreen"
+
+class "fashion_guru::screens::splash_screen.dart::_SplashScreenState" {
+  +double opacity
+  +void initState()
+  +void dispose()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::splash_screen.dart::_SplashScreenState"
+
+class "fashion_guru::screens::user_details_screen.dart::UserDetailScreen" {
+  +State<UserDetailScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::user_details_screen.dart::UserDetailScreen"
+
+class "fashion_guru::screens::user_details_screen.dart::_UserDetailScreenState" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::user_details_screen.dart::_UserDetailScreenState"
+
+class "fashion_guru::screens::vendor_profile.dart::VendorProfile" {
+  +State<VendorProfile> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::vendor_profile.dart::VendorProfile"
+
+class "fashion_guru::screens::vendor_profile.dart::_VendorProfileState" {
+  +Map<String, dynamic> loggedInUser
+  +bool isVendor
+  +void initState()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::vendor_profile.dart::_VendorProfileState"
+
+class "fashion_guru::screens::verification_screen.dart::VerificationScreen" {
+  +String userEmail
+  +String userPassword
+  +Map<String, dynamic> userDetails
+  +bool isAddUser
+  +EmailOTP myAuth
+  +State<VerificationScreen> createState()
+}
+
+"fashion_guru::screens::verification_screen.dart::VerificationScreen" o-- "email_otp::email_otp.dart::EmailOTP"
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::verification_screen.dart::VerificationScreen"
+
+class "fashion_guru::screens::verification_screen.dart::_VerificationScreenState" {
+  +TextEditingController otpCode
+  -GlobalKey<FormState> _formKey
+  +String errors
+  +void changeErrors()
+  +Widget build()
+  +void addUser()
+  +void checkOTP()
+}
+
+"fashion_guru::screens::verification_screen.dart::_VerificationScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::verification_screen.dart::_VerificationScreenState" o-- "flutter::src::widgets::framework.dart::GlobalKey<FormState>"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::verification_screen.dart::_VerificationScreenState"
+
+class "fashion_guru::screens::view_orders.dart::ViewOrders" {
+  +State<ViewOrders> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::view_orders.dart::ViewOrders"
+
+class "fashion_guru::screens::view_orders.dart::_ViewOrdersState" {
+  +Map<String, dynamic> loggedInUser
+  +Map<String, dynamic> ordersList
+  +Map<String, dynamic> getDeliveryStatus
+  +void initState()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::view_orders.dart::_ViewOrdersState"
+
+class "fashion_guru::screens::view_products_screen.dart::ViewProductScreen" {
+  +State<ViewProductScreen> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fashion_guru::screens::view_products_screen.dart::ViewProductScreen"
+
+class "fashion_guru::screens::view_products_screen.dart::_ViewProductScreenState" {
+  +Map<String, dynamic> loggedInUser
+  +List<dynamic> products
+  +int selectedProductsIndex
+  +TextEditingController searchController
+  +Color editIconColor
+  +Color deleteIconColor
+  +Color containerColor
+  +void initState()
+  +Widget build()
+}
+
+"fashion_guru::screens::view_products_screen.dart::_ViewProductScreenState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"fashion_guru::screens::view_products_screen.dart::_ViewProductScreenState" o-- "dart::ui::Color"
+"flutter::src::widgets::framework.dart::State" <|-- "fashion_guru::screens::view_products_screen.dart::_ViewProductScreenState"
+
+class "fashion_guru::services::firebase_api.dart::FirebaseApi" {
+  +GlobalKey<NavigatorState> navigatorKey
+  -FirebaseMessaging _firebaseMessaging
+  -AndroidNotificationChannel _androidChannel
+  +InitializationSettings initializationSettings
+  +FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin
+  +dynamic initNotifications()
+  +void onSelectNotification()
+  +dynamic handleBackgroundMessage()
+}
+
+"fashion_guru::services::firebase_api.dart::FirebaseApi" o-- "flutter::src::widgets::framework.dart::GlobalKey<NavigatorState>"
+"fashion_guru::services::firebase_api.dart::FirebaseApi" o-- "firebase_messaging::firebase_messaging.dart::FirebaseMessaging"
+"fashion_guru::services::firebase_api.dart::FirebaseApi" o-- "flutter_local_notifications::src::platform_specifics::android::notification_channel.dart::AndroidNotificationChannel"
+"fashion_guru::services::firebase_api.dart::FirebaseApi" o-- "flutter_local_notifications::src::initialization_settings.dart::InitializationSettings"
+"fashion_guru::services::firebase_api.dart::FirebaseApi" o-- "flutter_local_notifications::src::flutter_local_notifications_plugin.dart::FlutterLocalNotificationsPlugin"
+
+
+@enduml
